@@ -17,6 +17,9 @@ Coded by www.creative-tim.com
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
+// Stats page components
+import PaginationSimple from "layouts/sections/navigation/pagination/components/PaginationSimple";
+
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 
@@ -33,9 +36,9 @@ function Information() {
   return (
     <MKBox component="section" py={1} my={1}>
       <Container>
-        <Grid container item xs={12} spacing={6} alignItems="center" sx={{ mx: "auto" }}>
+        <Grid container item xs={12} spacing={12} alignItems="center" sx={{ mx: "auto" }}>
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
-            <Grid container spacing={6} sx={{ mt: { xs: 0, md: 6 } }}>
+            <Grid container spacing={6} sx={{ mt: { xs: 0, md: 4 } }}>
               <RotatingCard>
                 <RotatingCardFront
                   image={bgFront}
@@ -203,6 +206,7 @@ function Information() {
             </Grid>
           </Grid>
         </Grid>
+        <PaginationSimple />
       </Container>
     </MKBox>
   );
