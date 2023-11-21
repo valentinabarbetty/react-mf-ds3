@@ -27,7 +27,7 @@ import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 
 // Images
 import { useEffect, useState } from "react";
-
+//hola
 function Information() {
   const [breeds, setBreeds] = useState([]);
   const apiKey = `live_KubpQHMVPIU2VKXB7kjzYzhEphhPEJnmcwLIJSyCSFLhmyLqNuc0f3dr5gzteb2Z`;
