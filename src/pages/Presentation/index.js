@@ -13,8 +13,6 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// Sections components
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -64,7 +62,7 @@ function Presentation() {
       </MKBox>
       <Card
         sx={{
-          p: 1,
+          p: 2,
           mx: { xs: 2, lg: 3 },
           mt: -8,
           mb: 4,

@@ -17,17 +17,14 @@ Coded by www.creative-tim.com
 import PropTypes from "prop-types";
 
 // react-router-dom components
-import { Link } from "react-router-dom";
 
 // @mui material components
-import MuiLink from "@mui/material/Link";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import MKButton from "components/MKButton";
 
-function RotatingCard({ color, image, title, description, action }) {
+function RotatingCard({ color, image, title, description }) {
   return (
     <MKBox
       display="flex"
@@ -42,11 +39,7 @@ function RotatingCard({ color, image, title, description, action }) {
       left={0}
       zIndex={5}
       sx={{
-        backgroundImage: ({ palette: { gradients }, functions: { linearGradient, rgba } }) =>
-          `${linearGradient(
-            rgba(gradients[color] ? gradients[color].main : gradients.info.main, 0.85),
-            rgba(gradients[color] ? gradients[color].main : gradients.info.main, 0.85)
-          )}, url(${image})`,
+        backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         backfaceVisibility: "hidden",
         transform: "rotateY(180deg)",
@@ -59,27 +52,6 @@ function RotatingCard({ color, image, title, description, action }) {
         <MKTypography variant="body2" color="white" opacity={0.8}>
           {description}
         </MKTypography>
-        {action && (
-          <MKBox width="50%" mt={4} mb={2} mx="auto">
-            {action.type === "external" ? (
-              <MKButton
-                component={MuiLink}
-                href={action.route}
-                target="_blank"
-                rel="noreferrer"
-                color="white"
-                size="small"
-                fullWidth
-              >
-                {action.label}
-              </MKButton>
-            ) : (
-              <MKButton component={Link} to={action.route} color="white" size="small" fullWidth>
-                {action.label}
-              </MKButton>
-            )}
-          </MKBox>
-        )}
       </MKBox>
     </MKBox>
   );
